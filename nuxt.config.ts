@@ -17,6 +17,23 @@ export default defineNuxtConfig({
     },
     '/hello-isw': {
       isr: 38400,
+      
+    },
+    '/hello-cache': {
+      cache: {
+        maxAge: 38400,
+        
+      },
+    },
+    '/hello-cache-headers': {
+      headers: {
+        'Cache-Control': 'public, max-age=3600, must-revalidate',
+        'Netlify-CDN-Cache-Control': 'public, max-age=38400, stale-while-revalidate=60, durable',
+      },
     },
   },
+  nitro: {
+    minify: false,
+
+  }
 })
