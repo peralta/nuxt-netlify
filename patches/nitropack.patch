@@ -1,0 +1,14 @@
+diff --git a/dist/presets/netlify/preset.mjs b/dist/presets/netlify/preset.mjs
+index e40ce037b4f366950d594d80160f2d620785112f..da602acca263cc49c7920a677267b2808437ca7d 100644
+--- a/dist/presets/netlify/preset.mjs
++++ b/dist/presets/netlify/preset.mjs
+@@ -83,7 +83,8 @@ const netlifyEdge = defineNitroPreset(
+               ),
+               name: "edge server handler",
+               function: "server",
+-              generator: getGeneratorString(nitro)
++              generator: getGeneratorString(nitro),
++              cache: "manual"
+             }
+           ]
+         };

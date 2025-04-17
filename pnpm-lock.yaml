@@ -4,19 +4,27 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  nitropack:
+    hash: o5k7tffteusoufkjttlznnecsy
+    path: patches/nitropack.patch
+
 importers:
 
   .:
     dependencies:
       '@nuxt/image':
         specifier: 1.10.0
-        version: 1.10.0(@netlify/blobs@8.1.2)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)
+        version: 1.10.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)
       netlify-cli:
         specifier: ^20.0.2
         version: 20.0.2(@types/node@22.14.1)(db0@0.3.1)(ioredis@5.6.1)(picomatch@4.0.2)(rollup@4.40.0)
+      nitropack:
+        specifier: 2.11.9
+        version: 2.11.9(patch_hash=o5k7tffteusoufkjttlznnecsy)(@netlify/blobs@8.2.0)
       nuxt:
         specifier: ^3.16.2
-        version: 3.16.2(@netlify/blobs@8.1.2)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.40.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.1(@types/node@22.14.1)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
+        version: 3.16.2(@netlify/blobs@8.2.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.40.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.1(@types/node@22.14.1)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)
@@ -6715,7 +6723,7 @@ snapshots:
       - utf-8-validate
       - vue
 
-  '@nuxt/image@1.10.0(@netlify/blobs@8.1.2)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)':
+  '@nuxt/image@1.10.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)':
     dependencies:
       '@nuxt/kit': 3.16.2(magicast@0.3.5)
       consola: 3.4.2
@@ -6728,7 +6736,7 @@ snapshots:
       std-env: 3.9.0
       ufo: 1.6.1
     optionalDependencies:
-      ipx: 2.1.0(@netlify/blobs@8.1.2)(db0@0.3.1)(ioredis@5.6.1)
+      ipx: 2.1.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -9384,6 +9392,46 @@ snapshots:
       - ioredis
       - uploadthing
 
+  ipx@2.1.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1):
+    dependencies:
+      '@fastify/accept-negotiator': 1.1.0
+      citty: 0.1.6
+      consola: 3.4.2
+      defu: 6.1.4
+      destr: 2.0.5
+      etag: 1.8.1
+      h3: 1.15.1
+      image-meta: 0.2.1
+      listhen: 1.9.0
+      ofetch: 1.4.1
+      pathe: 1.1.2
+      sharp: 0.32.6
+      svgo: 3.3.2
+      ufo: 1.6.1
+      unstorage: 1.15.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1)
+      xss: 1.0.15
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@deno/kv'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@upstash/redis'
+      - '@vercel/blob'
+      - '@vercel/kv'
+      - aws4fetch
+      - bare-buffer
+      - db0
+      - idb-keyval
+      - ioredis
+      - uploadthing
+    optional: true
+
   iron-webcrypto@1.2.1: {}
 
   is-arrayish@0.2.1: {}
@@ -10060,7 +10108,7 @@ snapshots:
       p-wait-for: 5.0.2
       qs: 6.14.0
 
-  nitropack@2.11.9(@netlify/blobs@8.1.2):
+  nitropack@2.11.9(patch_hash=o5k7tffteusoufkjttlznnecsy)(@netlify/blobs@8.2.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@netlify/functions': 3.1.2(rollup@4.40.0)
@@ -10128,7 +10176,7 @@ snapshots:
       unenv: 2.0.0-rc.15
       unimport: 5.0.0
       unplugin-utils: 0.2.4
-      unstorage: 1.15.0(@netlify/blobs@8.1.2)(db0@0.3.1)(ioredis@5.6.1)
+      unstorage: 1.15.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1)
       untyped: 2.0.0
       unwasm: 0.3.9
       youch: 4.1.0-beta.7
@@ -10251,7 +10299,7 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuxt@3.16.2(@netlify/blobs@8.1.2)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.40.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.1(@types/node@22.14.1)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
+  nuxt@3.16.2(@netlify/blobs@8.2.0)(@parcel/watcher@2.5.1)(@types/node@22.14.1)(db0@0.3.1)(ioredis@5.6.1)(magicast@0.3.5)(rollup@4.40.0)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.1(@types/node@22.14.1)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
     dependencies:
       '@nuxt/cli': 3.24.1(magicast@0.3.5)
       '@nuxt/devalue': 2.0.2
@@ -10288,7 +10336,7 @@ snapshots:
       mlly: 1.7.4
       mocked-exports: 0.1.1
       nanotar: 0.2.0
-      nitropack: 2.11.9(@netlify/blobs@8.1.2)
+      nitropack: 2.11.9(patch_hash=o5k7tffteusoufkjttlznnecsy)(@netlify/blobs@8.2.0)
       nypm: 0.6.0
       ofetch: 1.4.1
       ohash: 2.0.11
@@ -10310,7 +10358,7 @@ snapshots:
       unimport: 4.2.0
       unplugin: 2.3.2
       unplugin-vue-router: 0.12.0(vue-router@4.5.0(vue@3.5.13(typescript@5.8.3)))(vue@3.5.13(typescript@5.8.3))
-      unstorage: 1.15.0(@netlify/blobs@8.1.2)(db0@0.3.1)(ioredis@5.6.1)
+      unstorage: 1.15.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1)
       untyped: 2.0.0
       vue: 3.5.13(typescript@5.8.3)
       vue-bundle-renderer: 2.1.1
@@ -11856,6 +11904,21 @@ snapshots:
       ufo: 1.6.1
     optionalDependencies:
       '@netlify/blobs': 8.1.2
+      db0: 0.3.1
+      ioredis: 5.6.1
+
+  unstorage@1.15.0(@netlify/blobs@8.2.0)(db0@0.3.1)(ioredis@5.6.1):
+    dependencies:
+      anymatch: 3.1.3
+      chokidar: 4.0.3
+      destr: 2.0.5
+      h3: 1.15.1
+      lru-cache: 10.4.3
+      node-fetch-native: 1.6.6
+      ofetch: 1.4.1
+      ufo: 1.6.1
+    optionalDependencies:
+      '@netlify/blobs': 8.2.0
       db0: 0.3.1
       ioredis: 5.6.1
 
